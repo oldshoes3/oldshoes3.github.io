@@ -1,9 +1,9 @@
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p {
 	margin: 1px;
-	padding: 10px;
+	padding: 0;
 	border: 0;
-	font-size: large;
+	font-size: larger;
 	font-family: Arial, Helvetica, sans-serif;
 	vertical-align: baseline;}
 
