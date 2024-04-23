@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Bravura';
-    src: url(Bravura.woff)
+    font-family: 'BravuraText';
+    src: url(BravuraText.woff)
 }
 
 html, body, div, span, applet, object,
@@ -9,7 +9,7 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 	padding: 10px;
 	border: 0;
 	font-size: larger;
-    font-family: 'Bravura';
+    font-family: 'BravuraText';
 	vertical-align: baseline;
 
 }
