@@ -1,0 +1,31 @@
+
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p {
+	margin: 1px;
+	padding: 10px;
+	border: 0;
+	font-size: larger;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: baseline;
+
+}
+    
+
+.section {
+    width: 100%;
+    padding: 2em;
+    display: block;
+}
+
+.image {
+    width: 50%;
+    align-items: center;
+    position: relative;
+    align-self: center;
+}
+
+.imagesection {
+    align-content: center;
+}
+
