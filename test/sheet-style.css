@@ -5,16 +5,33 @@
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p {
-	margin: 1px;
-	padding: 10px;
-	border: 0;
-	font-size: larger;
     font-family: 'BravuraText';
-	vertical-align: baseline;
-
+    font-size: 24px;
 }
-    
 
+#staff{
+    position: relative;
+}
+
+#notes{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-variant-ligatures: discretionary-ligatures
+}
+
+#meter{
+    position: absolute;
+    font-variant-ligatures: normal
+}
+
+
+/*
+#staff {
+}
+*/
+
+/*
 .section {
     width: 100%;
     padding: 2em;
@@ -31,4 +48,12 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 .imagesection {
     align-content: center;
 }
+*/
 
+
+/*
+.child.r{
+    left: 2px;
+    position: absolute;
+}
+*/
