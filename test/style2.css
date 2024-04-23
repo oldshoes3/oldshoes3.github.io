@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'BravuraText';
+    src: url(BravuraText.woff)
+}
 
 
-html, body, div, span, applet, object,
+
+
+/*
+html, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p {
 	margin: 1px;
 	padding: 10px;
@@ -8,10 +15,55 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 	font-size: larger;
 	font-family: Arial, Helvetica, sans-serif;
 	vertical-align: baseline;
+}*/
+
+#tools{
+    display: border-box;
+    background: grey;
+    width: 33%;
+    font-size: larger;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#sheet{
+    display: border-box;
+    position: relative;
+    background: rgb(236, 236, 236);
+    width: 62%;
+    left: 33%;
 
 }
-    
 
+#staff{
+    font-family: 'BravuraText';
+    font-size: 24px;
+    position: relative;
+    /*left: 0;
+    top: 0;*/
+}
+
+#notes{
+    font-family: 'BravuraText';
+    /*position: absolute;
+    left: 0;
+    top: 0;*/
+    font-variant-ligatures: discretionary-ligatures;
+}
+
+/*
+#meter{
+    font-family: 'BravuraText';
+    position: absolute;
+    font-variant-ligatures: normal;
+}
+*/
+
+/*
+#staff {
+}
+*/
+
+/*
 .section {
     width: 100%;
     padding: 2em;
@@ -28,4 +80,14 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 .imagesection {
     align-content: center;
 }
+*/
+
+
+/*
+.child.r{
+    left: 2px;
+    position: absolute;
+}
+*/
+
 
