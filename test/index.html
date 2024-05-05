@@ -7,30 +7,53 @@
   </head>
 
 
-  <body>
-    <div id="tools">
-      well
-    </div>
+  <body> <!-- use column layout-->
+    <div class="row">
 
-    </div>
-    <div id="sheet">
-      <div id="staff"> <!--staff-->
-        <script>
-          document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
-          //U+E01A: staff5linesWide (no width!!)
-        </script>      
-        <div id="notes">
-          &nbsp___
-          <!--
-          <script>
-          //document.write('\uE050&nbsp\uE09E_\uE084_\uE09F_\uE084')
-            //U+E050: G-clef (width)
-            //ligature
-          </script>
-          -->
-        </div>
+      <div class="column" style="background-color:#bbb;">
+        well
       </div>
 
+      <div class="column" style="background-color:beige">
+        <canvas id="sheet" width="400" height="200">
+
+          <script>
+            var canvas = document.getElementById("sheet");
+            var ctx = canvas.getContext("2d");
+
+            ctx.font = "24px BravuraText";
+            ctx.fillstyle = "black";
+
+            ctx.fillText("Hello, world!", 50, 100);
+
+
+
+
+
+
+          </script>
+        </canvas> <!--
+        <div id="staff">
+          <script>
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
+            //U+E01A: staff5linesWide (no width!!)
+          </script>      
+          <div id="notes">
+            <script>
+              document.write('&nbsp\ue050\uE084')
+            </script> -->
+            <!--&nbsp-->
+            <!--
+            <script>
+            //document.write('\uE050&nbsp\uE09E\uE084_\uE09F_\uE084')
+              //U+E050: G-clef (width)
+              //ligature
+            </script>
+            
+          </div> -->
+        </div>
+
+      </div>
     </div>
 
   </body>
