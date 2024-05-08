@@ -11,6 +11,8 @@
 .column {
     flex: 50%;
     padding: 10px;
+    font-family: 'BravuraText';
+    font-size: 24px;
 }
 
 /*
@@ -32,21 +34,61 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 	font-family: Arial, Helvetica, sans-serif;
 }
 */
+/*
+.fakeButtons {
+    float: left;
+    padding: 0 5px 0 0;
+    margin: 24px 2px 0px 2px;
+    width: 100%;
+}*/
 
-.note{
+.button {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 48px;
+    position: relative;
+  }
+
+.button label, .button input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.button input[type="radio"] {
+    opacity: 0;
+    z-index: 100;
+}
+  
+.button input[type="radio"]:checked + label {
+    background: #20b8be;
+    border-radius: 5px;
+}
+  
+.button label {
+    background: white;
+    cursor: pointer;
+    z-index: 90;
+    position: retative;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0px 2px;
+    border-width: 1px;
+}
+
+.noteChr{
     font-family: 'BravuraText';
     font-size: 24px;
     bottom: -5px;
-    padding: 0px 2px 0px;
+    width: 20px;
+    height: 48px;
+    top: 6px;
 }
 
-.note_shft{
-    font-family: 'BravuraText';
-    font-size: 24px;
-    position: relative;
-    bottom: -7.5px;
-    padding: 0px 2px 0px;
-}
 
 #staff{
     font-family: 'BravuraText';

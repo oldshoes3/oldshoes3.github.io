@@ -10,42 +10,86 @@
   <body> <!-- use column layout-->
     <div class='row'>
       <script>
-        //         double-whole,  whole,    half,   quarter,     8th,     16th,     32nd,     64th,     128th,    256th,    512th,   1024th
-        note_group = ['\uE1D1', '\uE1E2', '\uE1D3', '\uE1D5', '\uE1D7', '\uE1D9', '\uE1DB', '\uE1DD', '\uE1DF', '\uE1E1', '\uE1E3', '\uE1E5'];
-        rest_group = ['\uE4E2', '\uE4E3', '\uE4E4', '\uE4E5', '\uE4E6', '\uE4E7', '\uE4E8', '\uE4E9', '\uE4EA', '\uE4EB', '\uE4EC', '\uE4ED'];
-        function ifNoteorRest(event) {
-          document.getElementById('NorR').innerText =.
-            (event.target.value == 'NoverR')
-
+        dur_ind = [
+          'doublewhole', 'whole', 'half', 'quarter',
+          '8th', '16th', '32nd', '64th',
+          '128th', '256th', '512th', '1024th'
+        ];
+        noteGroup = [
+          '\uE1D1', '\uE1D2', '\uE1D3', '\uE1D5',
+          '\uE1D7', '\uE1D9', '\uE1DB', '\uE1DD',
+          '\uE1DF', '\uE1E1', '\uE1E3', '\uE1E5'
+        ];
+        restGroup = [
+          '\uE4E2', '\uE4F4', '\uE4F5', '\uE4E5', //with leger lines!
+          '\uE4E6', '\uE4E7', '\uE4E8', '\uE4E9',
+          '\uE4EA', '\uE4EB', '\uE4EC', '\uE4ED'
+        ];
+        var noteOrRest = noteGroup;
+        function isNoteOrRest(event) {
+          var noteOrRest = (event.target.value == 'note') ? noteGroup : restGroup
+          for (let i = 0; i < 8; i++) {
+            document.getElementById(dur_ind[i]).innerText = noteOrRest[i];
+          }
         }
-
       </script>
 
       <div class='column' style='background-color:#bbb'>
-        well
-        <div class='button_char' id='note_selector'>
-          <button class='note' id='doublewhole'>
+        <div>well</div>
 
-          </button> <!--double-whole note-->
-          <button class='note' id='whole'></button> <!--whole note-->
-          <button class='note' id='half'>
-            <div class='note_shft'></div>
-          </button> <!--half note-->
-          <button class='note' id='quarter'>
-            <div class='note_shft'></div>
-          </button> <!--quarter note-->
-          <button class='note' id='8th'>
-            <div class='note_shft'></div>
-          </button> <!--8th note-->
-          <button class='note' id='16th'>
-            <div class='note_shft'></div>
-          </button> <!--16th note-->
-          <button class='note' id='32nd'>
-            <div class='note_shft'></div>
-          </button> <!--32nd note-->
-          <button class='note' id='64nd'>
-            <div class='note_shft'></div>
-          </button> <!--64th note-->
+        <div class='fakeButtons'>
+
+
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='doublewhole' value='0'>
+            <label for='doublewhole' class='noteChr'></label>
+          </div>
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='whole' value='1'>
+            <label for='whole' class='noteChr'></label>
+          </div>
+          &nbsp
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='half' value='2'>
+            <label for='half' class='noteChr'></label>
+          </div>
+          &nbsp
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='quarter' value='3'>
+            <label for='quarter' class='noteChr'></label>
+          </div>
+          &nbsp
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='8th' value='4'>
+            <label for='8th' class='noteChr'></label>
+          </div>
+          &nbsp
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='16th' value='5'>
+            <label for='16th' class='noteChr'></label>
+          </div>
+          &nbsp
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='32nd' value='6'>
+            <label for='32nd' class='noteChr'></label>
+          </div>
+          &nbsp
+          <div class='button'>
+            <input type='radio' name='noteSelector' id='64th' value='7'>
+            <label for='64th' class='noteChr'></label>
+          </div>
+            <!--<button class='note' id='doublewhole'></button> --><!--double-whole note-->
+            <!--<button class='note' id='whole'></button> --><!--whole note-->
+            <!--<button class='note' id='half'></button> --><!--half note-->
+            <!--<button class='note' id='quarter'></button> --><!--quarter note-->
+            <!--<button class='note' id='8th'></button> --><!--8th note-->
+            <!--<button class='note' id='16th'></button> --><!--16th note-->
+            <!--<button class='note' id='32nd'></button> --><!--32nd note-->
+            <!--<button class='note' id='64th'></button> --><!--64th note-->
+            <!--<button class='note' id='dot'></button> --><!--dot-->
+
+        </div>
+        <br>
           <!-- dropdown menu
           <select style='font-size:20px' name='fast_note' class='note' id='fast_note_select'>
             <option value='64th' class='note'>
@@ -56,17 +100,15 @@
             <option value='512th' class='note'></option>
             <option value='1024th' class='note'></option>
           </select> -->
-          <br>
-          <input type='radio' name='NorR' id='NoverR' value='NoverR' checked='checked' onclick='ifNoteOrRest(event)'>
-          <label for='NoverR'>note </label>
-          <input type='radio' name='NorR' id='RoverN' value='RoverN' onclick='ifNoteOrRest(event)'>
+        <div id='is_note_or_rest'>
+          <input type='radio' name='NorR' id='NoverR' value='note' checked='checked' onclick='isNoteOrRest(event)'>
+          <label for='NoverR'>note</label>
+          <input type='radio' name='NorR' id='RoverN' value='rest' onclick='isNoteOrRest(event)'>
           <label for='RoverN'>rest</label>
-          <div id='NorR'>
-          <!--NorR: note over rest, NoverR: note over rest, RoverN: rest over note-->
-          </div>
-
-          
         </div>
+        <br>
+
+
       </div>
 
       <div class='column' style='background-color:beige'>
