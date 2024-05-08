@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-  <meta charset="UTF-8">
+  <meta charset='UTF-8'>
   <title>That Bass' project</title>
   <link href="style2.css" rel="stylesheet">
   </head>
@@ -15,24 +15,43 @@
       </div>
 
       <div class="column" style="background-color:beige">
-        <canvas id="sheet" width="400" height="200">
 
+        <div id="staff">
           <script>
-            var canvas = document.getElementById("sheet");
-            var ctx = canvas.getContext("2d");
-
-            ctx.font = "24px BravuraText";
-            ctx.fillstyle = "black";
-
-            ctx.fillText("Hello, world!", 50, 100);
-
-
-
-
-
-
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
+            //U+E01A: staff5linesWide (no width!!)
           </script>
-        </canvas> <!--
+        </div>
+
+        <div id="sheet">
+
+          <canvas id="notes" width="400" height="200">
+            
+
+            <script>
+              var canvas = document.getElementById("notes");
+              var ctx = canvas.getContext("2d");
+
+              ctx.font = "24px BravuraText";
+              ctx.fillstyle = "black";
+
+              ctx.fillText("\uE01A", 0, 0);
+
+              ctx.fillText("\uE084", 10, 10);
+              ctx.fillText("\uE084", 10, 30);
+
+
+
+
+            </script>
+          </canvas>
+        </div>
+        
+        
+        
+        <!--
         <div id="staff">
           <script>
             document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')

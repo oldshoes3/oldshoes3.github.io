@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'BravuraText';
-    src: url('BravuraText.otf') format('opentype');
+    src: url('BravuraText.woff2');
     font-weight: normal;
     font-style: normal;
 }
