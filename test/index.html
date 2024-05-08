@@ -9,44 +9,102 @@
 
   <body> <!-- use column layout-->
     <div class='row'>
+      <script>
+        //         double-whole,  whole,    half,   quarter,     8th,     16th,     32nd,     64th,     128th,    256th,    512th,   1024th
+        note_group = ['\uE1D1', '\uE1E2', '\uE1D3', '\uE1D5', '\uE1D7', '\uE1D9', '\uE1DB', '\uE1DD', '\uE1DF', '\uE1E1', '\uE1E3', '\uE1E5'];
+        rest_group = ['\uE4E2', '\uE4E3', '\uE4E4', '\uE4E5', '\uE4E6', '\uE4E7', '\uE4E8', '\uE4E9', '\uE4EA', '\uE4EB', '\uE4EC', '\uE4ED'];
+        function ifNoteorRest(event) {
+          document.getElementById('NorR').innerText =.
+            (event.target.value == 'NoverR')
+
+        }
+
+      </script>
 
       <div class='column' style='background-color:#bbb'>
         well
+        <div class='button_char' id='note_selector'>
+          <button class='note' id='doublewhole'>
+
+          </button> <!--double-whole note-->
+          <button class='note' id='whole'></button> <!--whole note-->
+          <button class='note' id='half'>
+            <div class='note_shft'></div>
+          </button> <!--half note-->
+          <button class='note' id='quarter'>
+            <div class='note_shft'></div>
+          </button> <!--quarter note-->
+          <button class='note' id='8th'>
+            <div class='note_shft'></div>
+          </button> <!--8th note-->
+          <button class='note' id='16th'>
+            <div class='note_shft'></div>
+          </button> <!--16th note-->
+          <button class='note' id='32nd'>
+            <div class='note_shft'></div>
+          </button> <!--32nd note-->
+          <button class='note' id='64nd'>
+            <div class='note_shft'></div>
+          </button> <!--64th note-->
+          <!-- dropdown menu
+          <select style='font-size:20px' name='fast_note' class='note' id='fast_note_select'>
+            <option value='64th' class='note'>
+              <div class='note_shft'></div>
+            </option>
+            <option value='128th' class='note'></option>
+            <option value='256th' class='note'></option>
+            <option value='512th' class='note'></option>
+            <option value='1024th' class='note'></option>
+          </select> -->
+          <br>
+          <input type='radio' name='NorR' id='NoverR' value='NoverR' checked='checked' onclick='ifNoteOrRest(event)'>
+          <label for='NoverR'>note </label>
+          <input type='radio' name='NorR' id='RoverN' value='RoverN' onclick='ifNoteOrRest(event)'>
+          <label for='RoverN'>rest</label>
+          <div id='NorR'>
+          <!--NorR: note over rest, NoverR: note over rest, RoverN: rest over note-->
+          </div>
+
+          
+        </div>
       </div>
 
       <div class='column' style='background-color:beige'>
 
         <div id='staff'>
           <script>
-            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
-            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
-            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(29) + '\uE01A')
+
+            staff_long = 29;
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A' + '<br>');
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A' + '<br>');
+            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A');
             //U+E01A: staff5linesWide (no width!!)
           </script>
-        </div>
-
-        <div id='sheet'>
-
-          <canvas id='notes' width='400' height='200'>
-            
-
-            <script>
-              var canvas = document.getElementById('notes');
-              var ctx = canvas.getContext('2d');
-
-              ctx.font = '24px BravuraText';
-              ctx.fillstyle = 'black';
-
-              ctx.fillText('\uE01A', 0, 0);
-
-              ctx.fillText('\uE084', 10, 10);
-              ctx.fillText('\uE084', 10, 30);
 
 
+          <div id='sheet'>
+
+            <canvas id='notes' width='400' height='200'>
+              
+
+              <script>
+                var canvas = document.getElementById('notes');
+                var ctx = canvas.getContext('2d');
+
+                ctx.font = '24px BravuraText';
+                ctx.fillstyle = 'black';
+
+                ctx.fillText('\uE01A', 0, 0);
+
+                ctx.fillText('\uE084', 10, 10);
+                ctx.fillText('\uE084', 10, 30);
 
 
-            </script>
-          </canvas>
+
+
+              </script>
+            </canvas>
+          </div>
         </div>
         
         

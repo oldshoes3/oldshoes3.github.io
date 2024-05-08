@@ -8,7 +8,7 @@
 .row {
     display: flex;
 }
-.colum {
+.column {
     flex: 50%;
     padding: 10px;
 }
@@ -33,13 +33,19 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 }
 */
 
-#sheet{
-    display: border-box;
-    position: relative;
-    background: rgb(236, 236, 236);
-    width: 62%;
-    left: 33%;
+.note{
+    font-family: 'BravuraText';
+    font-size: 24px;
+    bottom: -5px;
+    padding: 0px 2px 0px;
+}
 
+.note_shft{
+    font-family: 'BravuraText';
+    font-size: 24px;
+    position: relative;
+    bottom: -7.5px;
+    padding: 0px 2px 0px;
 }
 
 #staff{
@@ -49,6 +55,17 @@ iframe, h1, h2, h3, h4, h5, h6, p {
     /*left: 0;
     top: 0;*/
 }
+
+#sheet{
+    display: border-box;
+    position: absolute;
+    background: rgb(236, 236, 236);
+    width: 62%;
+    left: 33%;
+
+}
+
+
 
 #notes{
     font-family: 'BravuraText';
