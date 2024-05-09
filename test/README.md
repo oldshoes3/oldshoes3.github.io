@@ -27,7 +27,7 @@
     - looks not possible google searches didn't help
     - asked chatGPT and it suggested two resolutaion and none of them actually work
     - chatGPT is not all-powerful and it is lier.
-    - [link to the screenshot of chapGPT conservation](https://github.com/oldshoes3/oldshoes3.github.io/tree/main/test/chatgptSUCKS)
+    - [link to the screenshots of chapGPT conservation](https://github.com/oldshoes3/oldshoes3.github.io/tree/main/test/chatgptSUCKS)
     - I ended up is clef, meter has individual left, bottom position in CSS. It will be a headache when different key signature option added.
 
 - left panel, duration buttons and pitch buttons
