@@ -8,12 +8,18 @@
 .row {
     display: flex;
 }
+
 .column {
-    flex: 50%;
+    flex: 1;
     padding: 10px;
+}
+
+.column:nth-of-type(even) {
+    flex: 2;
     font-family: 'BravuraText';
     font-size: 24px;
 }
+
 
 /*
 html, span, applet, object,
@@ -42,55 +48,29 @@ iframe, h1, h2, h3, h4, h5, h6, p {
     width: 100%;
 }*/
 
-.button {
-    float: left;
-    margin: 0 5px 0 0;
-    width: 20px;
-    height: 48px;
-    position: relative;
-  }
-
-.button label, .button input {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.button input[type="radio"] {
-    opacity: 0;
-    z-index: 100;
-}
-  
-.button input[type="radio"]:checked + label {
-    background: #20b8be;
+.fakeButtons {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 0.2px;
+    width: 9%;
+    min-width: 38px;
+    min-height: 38px;
     border-radius: 5px;
 }
-  
-.button label {
-    background: white;
-    cursor: pointer;
-    z-index: 90;
-    position: retative;
-    border-radius: 5px;
-    text-align: center;
-    padding: 0px 2px;
-    border-width: 1px;
+
+.basicText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
 }
 
-.noteChr{
+.noteChr {
     font-family: 'BravuraText';
     font-size: 24px;
-    bottom: -5px;
-    width: 20px;
-    height: 48px;
-    top: 6px;
+    vertical-align: -5px;
 }
 
 
-#staff{
+#staff {
     font-family: 'BravuraText';
     font-size: 24px;
     position: relative;
@@ -98,7 +78,7 @@ iframe, h1, h2, h3, h4, h5, h6, p {
     top: 0;*/
 }
 
-#sheet{
+#sheett {
     display: border-box;
     position: absolute;
     background: rgb(236, 236, 236);
@@ -109,7 +89,7 @@ iframe, h1, h2, h3, h4, h5, h6, p {
 
 
 
-#notes{
+#notes {
     font-family: 'BravuraText';
     position: absolute;
     left: 0;

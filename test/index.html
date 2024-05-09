@@ -34,84 +34,134 @@
         }
       </script>
 
-      <div class='column' style='background-color:#bbb'>
-        <div>well</div>
+      <div class='column' id='panel' style='background-color:#bbb'>
+        <div class='basicText'>pitch</div>
+        <div class='pitch'>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='c' value='c' checked>
+            <label for='c' class='basicText'>C</label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='d' value='d'>
+            <label for='d' class='basicText'>D</label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='e' value='e'>
+            <label for='e' class='basicText'>E</label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='f' value='f'>
+            <label for='f' class='basicText'>F</label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='g' value='g'>
+            <label for='g' class='basicText'>G</label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='a' value='a'>
+            <label for='a' class='basicText'>A</label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='ptchSelector' id='b' value='b'>
+            <label for='b' class='basicText'>B</label>
+          </div>
+          <br>
+          <div class='fakeButtons'>
+            <input type='radio' name='accidental' id='doubleFlat' value='doubleFlat'>
+            <label for='doubleFlat' class='noteChr'></label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='accidental' id='flat' value='flat'>
+            <label for='flat' class='noteChr'></label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='accidental' id='natural' value='natural' checked>
+            <label for='natural' class='noteChr'></label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='accidental' id='sharp' value='sharp'>
+            <label for='sharp' class='noteChr'></label>
+          </div>
+          <div class='fakeButtons'>
+            <input type='radio' name='accidental' id='doubleSharp' value='doubleSharp'>
+            <label for='doubleSharp' class='noteChr'></label>
+          </div>
+          <select name='register' id='register_select' autocomplete='off'>
+            <option value='0' disabled>0</option>
+            <option value='0' disabled>1</option>
+            <option value='0' disabled>2</option>
+            <option value='0'>3</option>
+            <option value='0' selected>4</option>
+            <option value='0'>5</option>
+            <option value='0'>6</option>
+            <option value='0' disabled>7</option>
+            <option value='0' disabled>8</option>
+            <option value='0' disabled>9</option>
+          </select>
+        </div>
 
-        <div class='fakeButtons'>
+        <div class='basicText'>duration</div>
 
-
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='doublewhole' value='0'>
+        <div class='duration'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='doublewhole' value='0'>
             <label for='doublewhole' class='noteChr'></label>
           </div>
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='whole' value='1'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='whole' value='1'>
             <label for='whole' class='noteChr'></label>
           </div>
-          &nbsp
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='half' value='2'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='half' value='2'>
             <label for='half' class='noteChr'></label>
           </div>
-          &nbsp
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='quarter' value='3'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='quarter' value='3' checked>
             <label for='quarter' class='noteChr'></label>
           </div>
-          &nbsp
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='8th' value='4'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='8th' value='4'>
             <label for='8th' class='noteChr'></label>
           </div>
-          &nbsp
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='16th' value='5'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='16th' value='5'>
             <label for='16th' class='noteChr'></label>
           </div>
-          &nbsp
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='32nd' value='6'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='32nd' value='6'>
             <label for='32nd' class='noteChr'></label>
           </div>
-          &nbsp
-          <div class='button'>
-            <input type='radio' name='noteSelector' id='64th' value='7'>
+          <div class='fakeButtons'>
+            <input type='radio' name='durSelector' id='64th' value='7'>
             <label for='64th' class='noteChr'></label>
           </div>
-            <!--<button class='note' id='doublewhole'></button> --><!--double-whole note-->
-            <!--<button class='note' id='whole'></button> --><!--whole note-->
-            <!--<button class='note' id='half'></button> --><!--half note-->
-            <!--<button class='note' id='quarter'></button> --><!--quarter note-->
-            <!--<button class='note' id='8th'></button> --><!--8th note-->
-            <!--<button class='note' id='16th'></button> --><!--16th note-->
-            <!--<button class='note' id='32nd'></button> --><!--32nd note-->
-            <!--<button class='note' id='64th'></button> --><!--64th note-->
-            <!--<button class='note' id='dot'></button> --><!--dot-->
-
+          <div class='fakeButtons'>
+            <input type='checkbox' name='isdotted' id='dot' value='dot'>
+            <label for='dot' class='noteChr'></label>
+          </div>
+          <!--<button class='note' id='doublewhole'></button> --><!--double-whole note-->
+          <!--<button class='note' id='whole'></button> --><!--whole note-->
+          <!--<button class='note' id='half'></button> --><!--half note-->
+          <!--<button class='note' id='quarter'></button> --><!--quarter note-->
+          <!--<button class='note' id='8th'></button> --><!--8th note-->
+          <!--<button class='note' id='16th'></button> --><!--16th note-->
+          <!--<button class='note' id='32nd'></button> --><!--32nd note-->
+          <!--<button class='note' id='64th'></button> --><!--64th note-->
+          <!--<button class='note' id='dot'></button> --><!--dot-->
         </div>
-        <br>
-          <!-- dropdown menu
-          <select style='font-size:20px' name='fast_note' class='note' id='fast_note_select'>
-            <option value='64th' class='note'>
-              <div class='note_shft'></div>
-            </option>
-            <option value='128th' class='note'></option>
-            <option value='256th' class='note'></option>
-            <option value='512th' class='note'></option>
-            <option value='1024th' class='note'></option>
-          </select> -->
+        <!-- dropdown menu for faster notes? -->
         <div id='is_note_or_rest'>
           <input type='radio' name='NorR' id='NoverR' value='note' checked='checked' onclick='isNoteOrRest(event)'>
-          <label for='NoverR'>note</label>
+          <label for='NoverR' class='basicText'>note</label>
           <input type='radio' name='NorR' id='RoverN' value='rest' onclick='isNoteOrRest(event)'>
-          <label for='RoverN'>rest</label>
+          <label for='RoverN' class='basicText'>rest</label>
         </div>
-        <br>
-
-
+        <textarea id='codeWindow'>
+          
+        </textarea>
       </div>
 
-      <div class='column' style='background-color:beige'>
+      <div class='column' id='sheet' style='background-color:beige'>
 
         <div id='staff'>
           <script>
@@ -124,7 +174,7 @@
           </script>
 
 
-          <div id='sheet'>
+          <div id='sheett'>
 
             <canvas id='notes' width='400' height='200'>
               
