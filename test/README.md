@@ -27,9 +27,18 @@
     - looks not possible google searches didn't help
     - asked chatGPT and it suggested two resolutaion and none of them actually work
     - chatGPT is not all-powerful and it is lier.
+    - [link to the screenshot of chapGPT conservation](https://github.com/oldshoes3/oldshoes3.github.io/tree/main/test/chatgptSUCKS)
+    - I ended up is clef, meter has individual left, bottom position in CSS. It will be a headache when different key signature option added.
 
+- left panel, duration buttons and pitch buttons
+  - I moved to the left panel, and started make a buttons. I first make buttons for duration. The button making is pretty easy, but I felt it has to be radio buttons so multiple buttons should not be selected.
+  - I googled how to make radio buttons look like normal buttons, and there are some stackoverflow posts that deal with it. The problem is the text of each label is in BravuraText font. The glyphes become to place weird heigh position, and I started touch CSS file for it, and also touched relative/absolute feature, but I gave up. Anyone who thought of relative/absolute feature should go to hell.
 
+- textarea
+  - I created a textarea that shows what notes the user have input. I wanted to make it more dynamical, so manipulating the text in the textarea will also manipulate the sheet display, but no enough time to do because of that searching time for relative/absolute
 
+- scrript.js
+  - then I started code when the user selected duration, it triggers a giant function that collect checked pitch, duration button, and will add the info of current note in the textarea and display the note. This works is relatively easier than goddamn relative/absolute. I had to search several methods like getElementById. I found JQuery might be useful, but because of not enough time (due to goddamn relative/absolute) I just sticked to pure js.
 
 
 
