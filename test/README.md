@@ -1,4 +1,4 @@
-# [link](https://oldshoes3.github.io/test)
+# [link to the final project](https://oldshoes3.github.io)
 
 
 
