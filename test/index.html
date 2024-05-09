@@ -78,6 +78,15 @@
           </select>
         </div>
 
+        <!-- for rest for future
+
+        <div id='is_note_or_rest'>
+          <input type='radio' name='NorR' id='NoverR' value='note' checked='checked' onclick='isNoteOrRest(event)'>
+          <label for='NoverR' class='basicText'>note</label>
+          <input type='radio' name='NorR' id='RoverN' value='rest' onclick='isNoteOrRest(event)'>
+          <label for='RoverN' class='basicText'>rest</label>
+        </div> -->
+
         <div class='basicText'>duration</div>
 
         <div class='duration'>
@@ -113,60 +122,48 @@
             <input type='radio' name='durSelector' value='7' onclick='currentNoteCode(event)'>
             <label for='64th' class='noteChr' id='64th'></label>
           </div>
+          <!--for future
           <div class='fakeButtons'>
             <input type='checkbox' name='isdotted' id='dot' value='dot'>
             <label for='dot' class='noteChr'></label>
-          </div>
+          </div> -->
         </div>
         <!-- for future dropdown menu for faster notes? -->
-        <div id='is_note_or_rest'>
-          <input type='radio' name='NorR' id='NoverR' value='note' checked='checked' onclick='isNoteOrRest(event)'>
-          <label for='NoverR' class='basicText'>note</label>
-          <input type='radio' name='NorR' id='RoverN' value='rest' onclick='isNoteOrRest(event)'>
-          <label for='RoverN' class='basicText'>rest</label>
-        </div>
+
         <textarea id='codeWindow'></textarea>
-        <input type='button' value='clear' onclick='eraseText()'>
+        <input type='button' value='clear last note' onclick='eraseLastNote()'>
+        <input type='button' value='clear all' onclick='eraseText()'>
+
       </div>
 
       <div class='column' id='sheet' style='background-color:beige'>
+        <div class='system'>
+          <div class='staff'>
+            <script>
 
-        <div id='staff'>
-          <script>
-
-            staff_long = 29;
-            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A' + '<br>');
-            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A' + '<br>');
-            document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A');
-            //U+E01A: staff5linesWide (no width!!)
-          </script>
+              staff_long = 29;
+              document.write('\uE01A&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.repeat(staff_long) + '\uE01A');
+              //U+E01A: staff5linesWide (no width!!)
+            </script>
 
 
-          <div id='sheett'>
+            <span class='clef'></span>
 
-            <canvas id='notes' width='400' height='200'>
-              
+            <!--<span class='key'></span>-->
 
-              <script>
-                var canvas = document.getElementById('notes');
-                var ctx = canvas.getContext('2d');
+            <span class='meter'>
+                <span class='numerator'></span>
+                <span class='denominator'></span>
+            </span>
 
-                ctx.font = '24px BravuraText';
-                ctx.fillstyle = 'black';
-
-                ctx.fillText('\uE01A', 0, 0);
-
-                ctx.fillText('\uE084', 10, 10);
-                ctx.fillText('\uE084', 10, 30);
+            <span id='notes'>
+            </span>
 
 
 
-
-              </script>
-            </canvas>
+          
           </div>
         </div>
-        
         
         
         <!--

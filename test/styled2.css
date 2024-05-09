@@ -57,7 +57,7 @@ textarea {
     width: 95%;
 }
 
-.system {
+#system {
     border: 1px solid black;
     padding: 2px;
     width: 98%;
@@ -67,52 +67,32 @@ textarea {
 }
 
 
-.staff {
+#staff {
     font-family: 'BravuraText';
     font-size: 24px;
+    padding: 0.2px;
     position: relative;
-    padding: 2px;
     /*left: 0;
     top: 0;*/
 }
 
-.clef {
-    position: absolute;
-    top: 0;
-    left: 4px;
-}
-
-.numerator {
-    position: absolute;
-    left: 19px;
-    bottom: 16.075px;
-}
-.denominator {
-    position: absolute;
-    left: 19px;
-    bottom: 6.6px;
-}
-
-.note{
-    position: absolute;
-}
 
 
-/*
-#clefToMeter {
+
+.clefToMeter {
     position: absolute;
     left: 0;
     top: 0;
 }
 
-#clef {
+.clef {
     font-family: 'BravuraText';
     font-size: 24px;
     left: 0;
     top: 0;
 }
 
-#meter {
+.meter {
     font-family: 'BravuraText';
     font-size: 24px;
 }
@@ -132,7 +112,6 @@ textarea {
     top: 0;
     font-variant-ligatures: common-ligatures, discretionary-ligatures, historical-ligatures, contextual;
 }
-#/
 
 /*
 #meter{
