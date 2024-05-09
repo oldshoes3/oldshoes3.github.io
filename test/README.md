@@ -4,9 +4,40 @@
 
 # Very very simple sheet music maker!
 
+
+
+## What is it?
+- It generates a very simple sheet music
+
+## why is it?
+- I have felt established notation programs like Sibelius, Finale, Dorico are too heavy if I want just a simple one-staff lead sheet
+- The result will be much simpler version of Lilypond
+- I took specralism class last Fall. Although very rough explanation, in spectralism music, the composers write music based on frequencies instead of pitches.
+  - calculate frequencies -> write notes on the staff -> can be useful with programming.
+  - There are already existing software such as OpenMusic, or Bach package in Max. But these are quite hard-core program.
+  - Then I shifted my goal a little bit to make a simple lead sheet.
+
+## How to do?
+- I will make a web page so no installation needed for users. html with css used for appearance. Javascript used for coding.
+- The webpage has left/right windows
+- The left window has buttons or anything so the user can input the note information
+- The right window will show the result
+
+
+## plans and results
+- note will be input with right duration, accidentals, stem direction ✓
+- meter application ❌
+- different key signature ❌
+- beaming ❌
+- tempo, chord symbols, other text indication ❌
+
+
+
+## Detailed working process
+
 - Let's use Bravura font
-  - It turns out BravuraText.woff2 might be the best for text-based application
-    - It is actually not the best, just the same: ligature problem.
+  - BravuraText.woff2 might be the best for text-based application
+    - It turns out no: ligature problem.
 
 - The left window will display buttons with what pitch and what duration will be displayed in the sheet. The right window will show the sheet.
   - problem: Very initial thing I tried is make two windows, one at the left that shows buttons and one at the right that displays sheet. I searched and maybe relative/absolute position in CSS will work for it. It turns out no because the right window has to be relative and wrap other absolute elements.
