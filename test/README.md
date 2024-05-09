@@ -10,42 +10,50 @@
 - It generates a very simple sheet music
 
 ## why is it?
-- I have felt established notation programs like Sibelius, Finale, Dorico are too heavy if I want just a simple one-staff lead sheet
-- The result will be much simpler version of Lilypond
-- I took specralism class last Fall. Although very rough explanation, in spectralism music, the composers write music based on frequencies instead of pitches.
-  - calculate frequencies -> write notes on the staff -> can be useful with programming.
-  - There are already existing software such as OpenMusic, or Bach package in Max. But these are quite hard-core program.
-  - Then I shifted my goal a little bit to make a simple lead sheet.
+- too heavy notation programs (Sibelius, Finale, Dorico) if just wanting a simple one-staff lead sheet
+- user-friendlier, ligher version of Lilypond
+- took Spectral music class last Fall -> note indicator based on frequency calculatuin
+  - Already existing hordcore software (OpenMusic, Bach package in Max)
+- Then I shifted to make a simple lead sheet.
 
 ## How to do?
-- I will make a web page so no installation needed for users. html with css used for appearance. Javascript used for coding.
-- The webpage has left/right windows
+- A web page
+  - html with css for visual appearance. Javascript for coding.
+- Bravura font (web font version)
+
+- left/right windows
 - The left window has buttons or anything so the user can input the note information
 - The right window will show the result
 
 
-## plans and results
+## things work and don't work
 - note will be input with right duration, accidentals, stem direction ✓
-- meter application ❌
+- ledger line ❌
+- meter, barline ❌
+- unnecessary accidentals ❌
+- dotted notes ❌
+- tied notes ❌
 - different key signature ❌
-- beaming ❌
 - tempo, chord symbols, other text indication ❌
+- correction via textarea ❌
+- beaming ❌ -> still have zero idea how to achieve it
+- multiple system ❌
+
 
 
 
 ## Detailed working process
 
-- Let's use Bravura font
-  - BravuraText.woff2 might be the best for text-based application
-    - It turns out no: ligature problem.
+- Instead or Bravura, BravuraText might be the best for text-based application
+    - It turns out NO: ligature problem.
 
-- The left window will display buttons with what pitch and what duration will be displayed in the sheet. The right window will show the sheet.
-  - problem: Very initial thing I tried is make two windows, one at the left that shows buttons and one at the right that displays sheet. I searched and maybe relative/absolute position in CSS will work for it. It turns out no because the right window has to be relative and wrap other absolute elements.
-  - solve:Rachel gave me direction to use column function and gave me a link(https://us-west-2.protection.sophos.com/?d=w3schools.com&u=aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9ob3d0by9ob3d0b19jc3NfdHdvX2NvbHVtbnMuYXNw&i=NjQ0M2U3MWE4OThlOTc3NDU2YWIzNDFm&t=eWI5V3h5bTRXcDRhbUF1eG5nQVB4YUNMczR4Z3RkUGRtcERGR1VucHROQT0=&h=9ba410ca932340e4b50404ccbb25afd2&s=AVNPUEhUT0NFTkNSWVBUSVbELJNmWKXOYD-l2HEd1wftUatP5CzttD0LjZD-ISmbEg), so problem solved.
+- The left/right windows
+  - problem: Very initial thing I tried is make two windows, one at the left that shows buttons and one at the right that displays sheet. I searched and maybe relative/absolute position in CSS will work for it. It turns out no because the right window has to be relative and wrap other elements.
+  - solve:Rachel gave me hint to use a column and gave me a link(https://us-west-2.protection.sophos.com/?d=w3schools.com&u=aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9ob3d0by9ob3d0b19jc3NfdHdvX2NvbHVtbnMuYXNw&i=NjQ0M2U3MWE4OThlOTc3NDU2YWIzNDFm&t=eWI5V3h5bTRXcDRhbUF1eG5nQVB4YUNMczR4Z3RkUGRtcERGR1VucHROQT0=&h=9ba410ca932340e4b50404ccbb25afd2&s=AVNPUEhUT0NFTkNSWVBUSVbELJNmWKXOYD-l2HEd1wftUatP5CzttD0LjZD-ISmbEg), so problem solved.
 
 - At the right window, I tried display 5 staff-line.
-  - problem: The glyph for 5 staff-line are very short and surprimgly has no width for sake. Type multiple times of this glyph will not make the staff longer
-  - solve: (glyph - 6 spaces) repeat multiple times!
+  - problem: The glyph for 5 staff-line are very short but systemically has no width. Type multiple times of this glyph will not make the staff longer, but the staff get thicker.
+  - solve: (glyph - 6 spaces) repeat multiple times
 
 - display trebel clef
   - problem: because the staff line has no width I can just type after staff-glyph, but the clef glyph has the width, the next staff-glyph will be drawn with a little gap after the clef
