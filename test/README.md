@@ -12,8 +12,8 @@
 ## why is it?
 - too heavy notation programs (Sibelius, Finale, Dorico) if just wanting a simple one-staff lead sheet
 - user-friendlier, ligher version of Lilypond
-- took Spectral music class last Fall -> note indicator based on frequency calculatuin
-  - Already existing hordcore software (OpenMusic, Bach package in Max)
+- took Spectral music class last Fall -> having frequency calculation and display result pitches -> programming can be useful
+  - Already existing software (but hardcord) (OpenMusic, Bach package in Max)
 - Then I shifted to make a simple lead sheet.
 
 ## How to do?
