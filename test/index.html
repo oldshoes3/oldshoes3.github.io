@@ -9,94 +9,72 @@
 
   <body> <!-- use column layout-->
     <div class='row'>
-      <script>
-        dur_ind = [
-          'doublewhole', 'whole', 'half', 'quarter',
-          '8th', '16th', '32nd', '64th',
-          '128th', '256th', '512th', '1024th'
-        ];
-        noteGroup = [
-          '\uE1D1', '\uE1D2', '\uE1D3', '\uE1D5',
-          '\uE1D7', '\uE1D9', '\uE1DB', '\uE1DD',
-          '\uE1DF', '\uE1E1', '\uE1E3', '\uE1E5'
-        ];
-        restGroup = [
-          '\uE4E2', '\uE4F4', '\uE4F5', '\uE4E5', //with leger lines!
-          '\uE4E6', '\uE4E7', '\uE4E8', '\uE4E9',
-          '\uE4EA', '\uE4EB', '\uE4EC', '\uE4ED'
-        ];
-        var noteOrRest = noteGroup;
-        function isNoteOrRest(event) {
-          var noteOrRest = (event.target.value == 'note') ? noteGroup : restGroup
-          for (let i = 0; i < 8; i++) {
-            document.getElementById(dur_ind[i]).innerText = noteOrRest[i];
-          }
-        }
-      </script>
+      <script src='scrript.js'></script>
+
 
       <div class='column' id='panel' style='background-color:#bbb'>
         <div class='basicText'>pitch</div>
         <div class='pitch'>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='c' value='c' checked>
+            <input type='radio' name='ptchSelector' id='c' value='C' checked>
             <label for='c' class='basicText'>C</label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='d' value='d'>
+            <input type='radio' name='ptchSelector' id='d' value='D'>
             <label for='d' class='basicText'>D</label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='e' value='e'>
+            <input type='radio' name='ptchSelector' id='e' value='E'>
             <label for='e' class='basicText'>E</label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='f' value='f'>
+            <input type='radio' name='ptchSelector' id='f' value='F'>
             <label for='f' class='basicText'>F</label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='g' value='g'>
+            <input type='radio' name='ptchSelector' id='g' value='G'>
             <label for='g' class='basicText'>G</label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='a' value='a'>
+            <input type='radio' name='ptchSelector' id='a' value='A'>
             <label for='a' class='basicText'>A</label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='ptchSelector' id='b' value='b'>
+            <input type='radio' name='ptchSelector' id='b' value='B'>
             <label for='b' class='basicText'>B</label>
           </div>
           <br>
           <div class='fakeButtons'>
-            <input type='radio' name='accidental' id='doubleFlat' value='doubleFlat'>
+            <input type='radio' name='accidental' id='doubleFlat' value='bb'>
             <label for='doubleFlat' class='noteChr'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='accidental' id='flat' value='flat'>
+            <input type='radio' name='accidental' id='flat' value='b'>
             <label for='flat' class='noteChr'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='accidental' id='natural' value='natural' checked>
+            <input type='radio' name='accidental' id='natural' value='' checked>
             <label for='natural' class='noteChr'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='accidental' id='sharp' value='sharp'>
+            <input type='radio' name='accidental' id='sharp' value='#'>
             <label for='sharp' class='noteChr'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='accidental' id='doubleSharp' value='doubleSharp'>
+            <input type='radio' name='accidental' id='doubleSharp' value='x'>
             <label for='doubleSharp' class='noteChr'></label>
           </div>
-          <select name='register' id='register_select' autocomplete='off'>
+          <select name='register' id='register' autocomplete='off'>
             <option value='0' disabled>0</option>
-            <option value='0' disabled>1</option>
-            <option value='0' disabled>2</option>
-            <option value='0'>3</option>
-            <option value='0' selected>4</option>
-            <option value='0'>5</option>
-            <option value='0'>6</option>
-            <option value='0' disabled>7</option>
-            <option value='0' disabled>8</option>
-            <option value='0' disabled>9</option>
+            <option value='1' disabled>1</option>
+            <option value='2' disabled>2</option>
+            <option value='3'>3</option>
+            <option value='4' selected>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7' disabled>7</option>
+            <option value='8' disabled>8</option>
+            <option value='9' disabled>9</option>
           </select>
         </div>
 
@@ -104,61 +82,51 @@
 
         <div class='duration'>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='doublewhole' value='0'>
-            <label for='doublewhole' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='0' onclick='currentNoteCode(event)'>
+            <label for='doublewhole' class='noteChr' id='doublewhole'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='whole' value='1'>
-            <label for='whole' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='1' onclick='currentNoteCode(event)'>
+            <label for='whole' class='noteChr' id='whole'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='half' value='2'>
-            <label for='half' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='2' onclick='currentNoteCode(event)'>
+            <label for='half' class='noteChr' id='half'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='quarter' value='3' checked>
-            <label for='quarter' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='3' checked onclick='currentNoteCode(event)'>
+            <label for='quarter' class='noteChr' id='quarter'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='8th' value='4'>
-            <label for='8th' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='4' onclick='currentNoteCode(event)'>
+            <label for='8th' class='noteChr' id='8th'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='16th' value='5'>
-            <label for='16th' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='5' onclick='currentNoteCode(event)'>
+            <label for='16th' class='noteChr' id='16th'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='32nd' value='6'>
-            <label for='32nd' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='6' onclick='currentNoteCode(event)'>
+            <label for='32nd' class='noteChr' id='32nd'></label>
           </div>
           <div class='fakeButtons'>
-            <input type='radio' name='durSelector' id='64th' value='7'>
-            <label for='64th' class='noteChr'></label>
+            <input type='radio' name='durSelector' value='7' onclick='currentNoteCode(event)'>
+            <label for='64th' class='noteChr' id='64th'></label>
           </div>
           <div class='fakeButtons'>
             <input type='checkbox' name='isdotted' id='dot' value='dot'>
             <label for='dot' class='noteChr'></label>
           </div>
-          <!--<button class='note' id='doublewhole'></button> --><!--double-whole note-->
-          <!--<button class='note' id='whole'></button> --><!--whole note-->
-          <!--<button class='note' id='half'></button> --><!--half note-->
-          <!--<button class='note' id='quarter'></button> --><!--quarter note-->
-          <!--<button class='note' id='8th'></button> --><!--8th note-->
-          <!--<button class='note' id='16th'></button> --><!--16th note-->
-          <!--<button class='note' id='32nd'></button> --><!--32nd note-->
-          <!--<button class='note' id='64th'></button> --><!--64th note-->
-          <!--<button class='note' id='dot'></button> --><!--dot-->
         </div>
-        <!-- dropdown menu for faster notes? -->
+        <!-- for future dropdown menu for faster notes? -->
         <div id='is_note_or_rest'>
           <input type='radio' name='NorR' id='NoverR' value='note' checked='checked' onclick='isNoteOrRest(event)'>
           <label for='NoverR' class='basicText'>note</label>
           <input type='radio' name='NorR' id='RoverN' value='rest' onclick='isNoteOrRest(event)'>
           <label for='RoverN' class='basicText'>rest</label>
         </div>
-        <textarea id='codeWindow'>
-          
-        </textarea>
+        <textarea id='codeWindow'></textarea>
+        <input type='button' value='clear' onclick='eraseText()'>
       </div>
 
       <div class='column' id='sheet' style='background-color:beige'>
